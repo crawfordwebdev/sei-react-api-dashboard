@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import { getRunner, getMatrix } from '../services/api-calls'
+
 
 const Dashboard = () => {
 
@@ -11,6 +13,9 @@ const Dashboard = () => {
     <>
       <p>Hello!</p>
       <img src={IMAGE_STREAM_URL} alt="streaming-pi-server" width="640" height="480" />
+      <button onClick={getRunner}>Run!</button>
+      <button onClick={getMatrix}>What is the Matrix?</button>
+
     </>
   );
 }
